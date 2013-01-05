@@ -1,4 +1,4 @@
-CROSS_COMPILE=/home/klin1344/cm10/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
+CROSS_COMPILE=/home/klin1344/kernel/linaro4.7/bin/arm-eabi-
 INITRAMFS_DIR=ramdisk.gz
 KERNEL_NAME=FusionUltimate-AOSP
 KERNEL_VNUMBER=4.0
