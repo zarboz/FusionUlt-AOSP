@@ -221,7 +221,7 @@ static void compr_event_handler(uint32_t opcode,
 		pr_debug("[AUD]%s: Not Supported Event opcode[0x%x]\n", __func__, opcode);
 		break;
 	}
-	pr_debug("[AUD]%s opcode =%08x, start %d ---\n", __func__, opcode, atomic_read(&prtd->start));
+// 	pr_debug("[AUD]%s opcode =%08x, start %d ---\n", __func__, opcode, ((&prtd!=NULL)?atomic_read(&prtd->start):-1));
 }
 
 static int msm_compr_playback_prepare(struct snd_pcm_substream *substream)

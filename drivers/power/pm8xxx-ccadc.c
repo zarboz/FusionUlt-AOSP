@@ -562,7 +562,7 @@ static int ccadc_get_rsense_voltage(int *voltage_uv)
 
 int pm8xxx_ccadc_get_battery_current(int *bat_current_ua)
 {
-	int voltage_uv, rc;
+	int voltage_uv = 0, rc;
 
 	rc = ccadc_get_rsense_voltage(&voltage_uv);
 	if (rc) {
@@ -616,7 +616,7 @@ DEFINE_SIMPLE_ATTRIBUTE(reg_fops, get_reg, set_reg, "0x%02llx\n");
 
 static int get_calc(void *data, u64 *val)
 {
-	int ibat, rc;
+	int ibat = 0, rc;
 
 	rc = pm8xxx_ccadc_get_battery_current(&ibat);
 	*val = ibat;
@@ -626,7 +626,7 @@ DEFINE_SIMPLE_ATTRIBUTE(calc_fops, get_calc, NULL, "%lld\n");
 
 void dump_all(void)
 {
-	u64 val;
+	u64 val = 0;
 	get_reg((void *)CCADC_ANA_PARAM, &val);
 	pr_info("CCADC_ANA_PARAM = 0x%02llx\n", val);
 	get_reg((void *)CCADC_DIG_PARAM, &val);
