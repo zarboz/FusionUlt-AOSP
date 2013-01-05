@@ -550,7 +550,7 @@ static inline int suspend(void)
 static int mt9v113_reg_init(void)
 {
 	int rc = 0, k = 0;
-	unsigned short check_value;
+	unsigned short check_value = 0;
 	struct msm_camera_sensor_info *sinfo = mt9v113_pdev->dev.platform_data;
 
     /* Power Up Start */
