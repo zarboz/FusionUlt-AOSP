@@ -1,7 +1,7 @@
 #
 # Makefile for Linux kernel SUN RPC
 #
-
+CFLAGS_xdr.o += -O1
 
 obj-$(CONFIG_SUNRPC) += sunrpc.o
 obj-$(CONFIG_SUNRPC_GSS) += auth_gss/
